@@ -1,5 +1,5 @@
 #!/bin/sh
-pkg install libjansson termux-api vim git -y
+pkg install libjansson termux-api vim -y
 cp /data/data/com.termux/files/usr/include/linux/sysctl.h /data/data/com.termux/files/usr/include/sys
 git clone https://github.com/manggist/renot4x.git
 mv renot4x ccminer
