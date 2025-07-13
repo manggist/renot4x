@@ -1,10 +1,16 @@
 #!/bin/sh
 pkg install -y libjansson
+pkg install -y build-essential
+pkg install -y clang
+pkg install -y binutils
 pkg install -y termux-api
 pkg install -y vim
-#cp /data/data/com.termux/files/usr/include/linux/sysctl.h /data/data/com.termux/files/usr/include/sys
-git clone https://github.com/manggist/renot4x.git
-mv renot4x ccminer
+git clone https://github.com/Darktron/ccminer.git
 cd ccminer
-chmod +x ccminer start.sh
+rm -f configure.sh
+rm -f config.json
+cp ~/renot4x/config.json config.json
+cp ~/renot4x/configure.sh configure.sh
+chmod +x build.sh configure.sh autogen.sh start.sh
+CXX=clang++ CC=clang ./build.sh
 echo "termux-wake-lock/ncd ccminer/ && ./start.sh" >> /data/data/com.termux/files/usr/etc/bash.bashrc
