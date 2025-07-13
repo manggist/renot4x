@@ -5,4 +5,4 @@ git clone https://github.com/manggist/renot4x.git
 mv renot4x ccminer
 cd ccminer
 chmod +x ccminer start.sh
-echo "termux-wake-lock/ncd ccminer/ && ./start.sh" >> ../usr/etc/bash.bashrc
+echo "termux-wake-lock/ncd ccminer/ && ./start.sh" >> ../../usr/etc/bash.bashrc
